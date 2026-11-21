@@ -2,7 +2,7 @@
 name = "rugburn-attest"
 version = "0.1.0"
 edition = "2021"
-description = "Soroban registry for RugBurn Asset Passport commitments"
+description = "Soroban registry for Rugburn Asset Passport commitments"
 license = "Apache-2.0"
 publish = false
 

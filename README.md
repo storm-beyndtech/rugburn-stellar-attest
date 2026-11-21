@@ -1,4 +1,4 @@
-# RugBurn Asset Passport Registry
+# Rugburn Asset Passport Registry
 
 A Soroban contract for publishing and verifying SHA-256 commitments to Stellar Asset Passport reports. An integration can look up an asset by code and issuer, then compare the report it received with the publisher’s commitment.
 

@@ -34,7 +34,7 @@ Compare the digest with the hex representation of `report_hash` returned by `get
 
 ## Historical testnet record
 
-The [historical RugBurn testnet registry](https://lab.stellar.org/r/testnet/contract/CA3WLC2KFMJ2KQ5HHWGP5WRS3LX3HJF5ZVW2APRBRUYDV73OUGYG5P2K) used an earlier initialization interface. On 21 November 2026, Stellar’s public testnet RPC returned the contract instance, Wasm entry, and the USDC record for the key above with `liveUntilLedgerSeq` equal to `0` at ledger `5,846,489`. These are archived entries. [Stellar RPC `getLedgerEntries`](https://developers.stellar.org/docs/data/apis/rpc/api-reference/methods/getLedgerEntries)
+The [historical Rugburn testnet registry](https://lab.stellar.org/r/testnet/contract/CA3WLC2KFMJ2KQ5HHWGP5WRS3LX3HJF5ZVW2APRBRUYDV73OUGYG5P2K) used an earlier initialization interface. On 21 November 2026, Stellar’s public testnet RPC returned the contract instance, Wasm entry, and the USDC record for the key above with `liveUntilLedgerSeq` equal to `0` at ledger `5,846,489`. These are archived entries. [Stellar RPC `getLedgerEntries`](https://developers.stellar.org/docs/data/apis/rpc/api-reference/methods/getLedgerEntries)
 
 | Field | Archived value |
 | --- | --- |
