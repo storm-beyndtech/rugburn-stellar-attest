@@ -1,0 +1,28 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  attestations: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: stellar/stellar-cli@f2a7b74175c34585f3b30a1abf42a2d41cbcc390 # v30.0.1
+        with:
+          version: "30.0.1"
+      - run: rustup show
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+      - run: stellar contract build --locked
+      - run: stellar contract info interface --wasm target/wasm32v1-none/release/rugburn_attest.wasm
+      - run: cargo test --locked
+        env:
+          RUGBURN_TEST_WASM: target/wasm32v1-none/release/rugburn_attest.wasm
+      - run: sha256sum -c --strict examples/SHA256SUMS
